@@ -40,12 +40,11 @@ export default () => (
         (gl.shadowMap.type = THREE.PCFSoftShadowMap)
       )}
     >
-      <ambientLight intensity={0.2} castShadow />
+      <ambientLight intensity={0.2} />
       <pointLight
         intensity={1}
         position={[0, 0, 10]}
         color="#663399"
-        castShadow
       />
       <RectAreaLightDecl />
       <RectAreaLightDecl
