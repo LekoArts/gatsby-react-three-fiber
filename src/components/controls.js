@@ -6,16 +6,11 @@ extend({ OrbitControls })
 
 const Controls = props => {
   const { camera, scene } = useThree()
-  const controls = useRef()
+  const ref = useRef()
   
-	
-	useRender(({ camera }) => {
-		controls.current && controls.current.update()
-    camera.updateMatrixWorld()
-
-    camera.lookAt(scene.position)
-	})
-  return <orbitControls ref={controls} args={[camera]} {...props} />
+  useRender(() => ref.current && ref.current.update())
+  
+  return <orbitControls ref={ref} args={[camera]} {...props} />
 }
 
 export default Controls

@@ -7,10 +7,17 @@ import "../style.css"
 
 export default () => (
   <main>
-    <Canvas camera={{ far: 10000 }}>
+    <Canvas>
       <ambientLight intensity={0.7} />
       <Model url={GLTF} />
-      <Controls />
+      <Controls autoRotate
+      enablePan={false}
+      enableZoom={false}
+      enableDamping
+      dampingFactor={0.1}
+      rotateSpeed={0.1}
+      maxPolarAngle={Math.PI / 3}
+      minPolarAngle={Math.PI / 3} />
     </Canvas>
   </main>
 )
