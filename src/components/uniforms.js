@@ -1,4 +1,3 @@
-
 /**
  * Uniforms library for RectAreaLight shared webgl shaders
  * @author abelnation
@@ -16406,7 +16405,7 @@ export default {
       0.996389,
       -0.0808124,
       0.0489007,
-      1.6577
+      1.6577,
     ]
 
     var LTC_MAT_2 = [
@@ -32793,7 +32792,7 @@ export default {
       0.932164,
       0.0471899,
       0,
-      1
+      1,
     ]
 
     // data textures
@@ -32838,5 +32837,5 @@ export default {
 
     Object.assign(THREE.ShaderLib.standard.uniforms, ltc)
     Object.assign(THREE.ShaderLib.physical.uniforms, ltc)
-  }
+  },
 }

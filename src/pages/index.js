@@ -32,9 +32,21 @@ const RectAreaLightDecl = ({
 
 export default () => (
   <main style={{ background: `url(${bg})` }}>
-    <Canvas orthographic camera={{ position: [0, 0, 150], zoom: 5 }} onCreated={({ gl }) => ((gl.shadowMap.enabled = true), (gl.shadowMap.type = THREE.PCFSoftShadowMap))}>
+    <Canvas
+      orthographic
+      camera={{ position: [0, 0, 150], zoom: 5 }}
+      onCreated={({ gl }) => (
+        (gl.shadowMap.enabled = true),
+        (gl.shadowMap.type = THREE.PCFSoftShadowMap)
+      )}
+    >
       <ambientLight intensity={0.2} castShadow />
-      <pointLight intensity={1} position={[0, 0, 10]} color="#663399" castShadow />
+      <pointLight
+        intensity={1}
+        position={[0, 0, 10]}
+        color="#663399"
+        castShadow
+      />
       <RectAreaLightDecl />
       <RectAreaLightDecl
         intensity={4}
